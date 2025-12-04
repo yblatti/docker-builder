@@ -50,7 +50,7 @@ jobs:
       # The version of libde265 to be installed - see https://github.com/strukturag/libde265/releases
       LIBDE265_VERSION: 1.0.8
       # The version of libheif to be installed - see # https://github.com/strukturag/libheif/releases
-      LIBHEIF_VERSION: 1.12.0
+      LIBHEIF_VERSION: 1.15.2
     strategy:
       fail-fast: false
       matrix:
