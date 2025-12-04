@@ -67,6 +67,7 @@ jobs:
           - "8.2"
           - "8.3"
           - "8.4"
+          - "8.5"
     steps:
       -
         name: Checkout
@@ -75,7 +76,7 @@ jobs:
         name: Create initial image
         run: |
           PHP_VERSION_DOCKERSUFFIX=''
-          if [ "${{ matrix.php-version }}" = '8.5' ]; then
+          if [ "${{ matrix.php-version }}" = '8.6' ]; then
             PHP_VERSION_DOCKERSUFFIX='-rc'
           fi
           docker build \
@@ -244,6 +245,9 @@ jobs:
             graphicsmagic-version: "1.3.36"
             imagemagick-version: "7.1.0-8"
           - php-version: "8.4"
+            graphicsmagic-version: "1.3.36"
+            imagemagick-version: "7.1.0-8"
+          - php-version: "8.5"
             graphicsmagic-version: "1.3.36"
             imagemagick-version: "7.1.0-8"
         extensions:
